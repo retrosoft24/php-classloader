@@ -1,9 +1,9 @@
-#Java-style Class Loader for PHP
-
+Java-style Class Loader for PHP
+====================
 The lightweight and powerful tool in one file. It is NOT compatible with Composer and useful for production.
 
-##Features:
-
+Features:
+--------------------
 - Load classes from zip-archives downloaded from GitHub or other sources without unpacking (using composer.json).
 - Support composer json files and "vendor" directory with dependencies.
 - "includes" directory support to include project files automatically.
@@ -14,8 +14,8 @@ The lightweight and powerful tool in one file. It is NOT compatible with Compose
 
 For working with zip-packed dependencies put it into "classpath"/"lib/vendor" or into the level up project main directory. Classes will be loaded without unpacking. Dependencies without resource files supported only.
 
-##Usage:
-
+Usage:
+--------------------
 It is one file only. Simple copy retro-classloader.php into your project directory or other. In the php-file write include_once("vendor/retro-classloader.php"); where was written  include_once("vendor/autoload.php");
 
 That is all. So, you can use composer to add new dependencies to the project and this class loader for the production environment.
@@ -25,7 +25,9 @@ After first start, the class mapping file "retro-classloader.inc" will be genera
 This class loader is intended for use with projects which have a lot of dependencies. Because it loads files from zip/jar-archives instead of unpacking it, like Composer does. The 5-10 zip-archives in the project is better than a big tree with many hundreds of unpacked php-files and directories.
 Classes/files in "includes" directory (inside one of "classpath"/"lib"/"vendor" directories) is for autoloading.
 
-Example of usage. Place "retro-classloader.php" into your project directory (or "classpath" and etc.):
+Example of usage 
+--------------------
+Place "retro-classloader.php" into your project directory (or "classpath" and etc.):
 
     [vendor]
     retro-classloader.php
@@ -80,5 +82,7 @@ Results:
     TestDependency2Class constructor called
     Text or something else...
 
-MIT license. Copyright (c) 2022 Retro Soft, Inc. http://retrosoft.ru/
+MIT license. Copyright (c) 2022 Retro Soft, Inc. 
+http://retrosoft.ru/
+
 Author: Dmitry Nevstruev <braincoder@retrosoft.ru>
